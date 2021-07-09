@@ -1,0 +1,45 @@
+CREATE TABLE APP.users (
+  id int NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+  name varchar(250) NOT NULL,
+  email varchar(250) NOT NULL,
+  password varchar(250) NOT NULL,
+  PRIMARY KEY (id),
+  CONSTRAINT email_UNIQUE UNIQUE(email)
+)
+
+LOCK TABLE APP.users IN SHARE MODE
+
+INSERT INTO APP.users(name, email, password ) VALUES ('Nur','nur@gmail.com','123456')
+
+
+
+
+
+create table app.PRODUCTS(
+  id int NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+  name varchar(450) NOT NULL,
+  author varchar(100) NOT NULL,
+  category varchar(450) NOT NULL,
+  price double NOT NULL,
+  image varchar(450) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+lock table app.PRODUCTS in share mode;
+
+INSERT INTO APP.PRODUCTS(NAME, AUTHOR, CATEGORY, PRICE, IMAGE) VALUES ( 'Balýkçý ve Oðlu', 'Livaneli', 'Edebiyat', 28.99, 'edebiyat1.jpg');
+INSERT INTO APP.PRODUCTS(NAME, AUTHOR, CATEGORY, PRICE, IMAGE) VALUES ( 'Kayýp Tanrýlar Ülkesi', 'Ahmet  Ümit', 'Edebiyat', 25.50, 'edebiyat2.jpg');
+INSERT INTO APP.PRODUCTS(NAME, AUTHOR, CATEGORY, PRICE, IMAGE) VALUES ( 'Süt Lekesi', 'Esra Ezmeci', 'Edebiyat', 27.75, 'edebiyat3.jpg');
+INSERT INTO APP.PRODUCTS(NAME, AUTHOR, CATEGORY, PRICE, IMAGE) VALUES ( 'Veba Geceleri', 'Orhan Pamuk', 'Edebiyat', 20.90, 'edebiyat4.jpg');
+INSERT INTO APP.PRODUCTS(NAME, AUTHOR, CATEGORY, PRICE, IMAGE) VALUES ( 'Seyir', 'Piraye', 'Edebiyat', 28.80, 'edebiyat5.jpg');
+INSERT INTO APP.PRODUCTS(NAME, AUTHOR, CATEGORY, PRICE, IMAGE) VALUES ( 'Gece Yarýsý Kütüphanesi', 'Matt Haig', 'Edebiyat', 22.99, 'edebiyat6.jpg');
+INSERT INTO APP.PRODUCTS(NAME, AUTHOR, CATEGORY, PRICE, IMAGE) VALUES ( '1984', 'George Orwell', 'Edebiyat', 17.99, 'edebiyat7.jpg');
+INSERT INTO APP.PRODUCTS(NAME, AUTHOR, CATEGORY, PRICE, IMAGE) VALUES ( 'Zamanýn Kýsa Tarihi', 'Stephen Hawking', 'Bilim', 22.99, 'bilim1.jpg');
+INSERT INTO APP.PRODUCTS(NAME, AUTHOR, CATEGORY, PRICE, IMAGE) VALUES ( 'Incognito:Beynin Gizli Hayatý', 'David Eagleman', 'Bilim', 29.99, 'bilim2.jpg');
+INSERT INTO APP.PRODUCTS(NAME, AUTHOR, CATEGORY, PRICE, IMAGE) VALUES ( 'Kimsenin Bilemeyeceði Þeyler', 'Sinan Canan', 'Bilim', 25.99, 'bilim3.jpg');
+INSERT INTO APP.PRODUCTS(NAME, AUTHOR, CATEGORY, PRICE, IMAGE) VALUES ( 'Kozmos Evrenin ve Yaþamýn Sýrlarý', 'Carl Sagan', 'Bilim', 19.99, 'bilim4.jpg');
+INSERT INTO APP.PRODUCTS(NAME, AUTHOR, CATEGORY, PRICE, IMAGE) VALUES ( 'Aðaçlarýn Gizli Yaþamý', 'Peter Wohlleben', 'Bilim', 32.99, 'bilim5.jpg');
+INSERT INTO APP.PRODUCTS(NAME, AUTHOR, CATEGORY, PRICE, IMAGE) VALUES ( 'Küçük Prens', 'Antoine De Saint-Exupery', 'Çocuk', 22.50, 'cocuk1.jpg');
+INSERT INTO APP.PRODUCTS(NAME, AUTHOR, CATEGORY, PRICE, IMAGE) VALUES ( 'Ýnsan Vücudu:Ýçeride Neler Oluyor?', 'Glenn Murphy', 'Çocuk', 15.99, 'cocuk2.jpg');
+INSERT INTO APP.PRODUCTS(NAME, AUTHOR, CATEGORY, PRICE, IMAGE) VALUES ( 'Babaannem Geri Döndü', 'Þermin Yaþar', 'Çocuk', 20.50, 'cocuk3.jpg');
+
